@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "image_banner": {
@@ -31,10 +22,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["heading", "button"],
       "settings": {
         "image": "shopify://shop_images/fujiphilm-ojZ4wJNUM5w-unsplash.jpg",
         "image_overlay_opacity": 40,
@@ -48,6 +36,39 @@
         "mobile_content_alignment": "center",
         "show_text_below": false
       }
+    },
+    "usp_icons": {
+      "type": "usp-icons",
+      "settings": {
+        "heading": "Why Shop With Us?"
+      },
+      "blocks": {
+        "usp1": {
+          "type": "usp",
+          "settings": {
+            "icon_svg": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2'/><path d='M15 18H9'/><path d='M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14'/><circle cx='17' cy='18' r='2'/><circle cx='7' cy='18' r='2'/></svg>",
+            "title": "Fast Delivery",
+            "text": "Get your order quickly and reliably."
+          }
+        },
+        "usp2": {
+          "type": "usp",
+          "settings": {
+            "icon_svg": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 10a4 4 0 0 1-8 0'/><path d='M3.103 6.034h17.794'/><path d='M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z'/></svg>",
+            "title": "Quality Products",
+            "text": "Curated items you can trust."
+          }
+        },
+        "usp3": {
+          "type": "usp",
+          "settings": {
+            "icon_svg": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m11 17 2 2a1 1 0 1 0 3-3'/><path d='m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4'/><path d='m21 3 1 11h-2'/><path d='M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3'/><path d='M3 4h8'/></svg>",
+            "title": "Trusted Service",
+            "text": "We build relationships, not just sales."
+          }
+        }
+      },
+      "block_order": ["usp1", "usp2", "usp3"]
     },
     "featured_collection": {
       "type": "featured-collection",
@@ -78,8 +99,10 @@
       }
     }
   },
-  "order": [
-    "image_banner",
-    "featured_collection"
-  ]
+  "order": ["image_banner", "usp_icons", "featured_collection"]
 }
+
+
+
+
+
