@@ -1,11 +1,12 @@
-Lightskint Store Shopify Theme Enhancements
+# LIGHTSKINT STORE SHOPIFY THEME ENHANCEMENTS
 
 This project documents the customizations, performance improvements, and third-party integrations implemented for Lightskint Store, a Shopify store selling fashion clothes, shoes, and bags.
 
 The goal of this work was to improve customer experience, optimize SEO, enhance performance, and enable data-driven insights.
 
- Features Implemented
- Frontend Enhancements
+# FEATURES IMPLEMENTED
+
+# FRONTEND ENHANCEMENTS
 
 Custom USP Section – Editable section highlighting store benefits (Free Shipping, Easy Returns, Secure Checkout).
 
@@ -20,6 +21,7 @@ Klaviyo Popup Signup Form – Collects emails and builds marketing lists.
 Meta Tags & Open Graph – Added dynamic meta tags for SEO and social link previews.
 
 JSON-LD Schema – Ensures rich snippets for products (price, stock, reviews) in search results.
+
 
 Analytics & Tracking
 
@@ -42,22 +44,22 @@ Screenshots
 ## Screenshots  
 
 ### Homepage  
-![Homepage](screenshots/screenshot-1.png)  
+![Homepage](screenshot-1.png)  
 
 ### USP Section  
-![USP Section](screenshots/screenshot-2.png)  
+![USP Section](screenshot-2.png)  
 
 ### Cart Drawer with Free Shipping Goal Tracking  
-![Cart Drawer](screenshots/screenshot-3.png)  
+![Cart Drawer](screenshot-3.png)  
 
 ### Judge.me Reviews Integration  
-![Reviews](screenshots/screenshot-4.png)  
+![Reviews](screenshot-4.png)  
 
 ### Klaviyo Signup Popup  
-![Klaviyo Popup](screenshots/screenshot-5.png)  
+![Klaviyo Popup](screenshot-5.png)  
 
 ### Lighthouse Performance Audit  
-![Lighthouse Audit](screenshots/screenshot-6.png)  
+![Lighthouse Audit](screenshot-6.png)  
 
 
 Custom USP Section
