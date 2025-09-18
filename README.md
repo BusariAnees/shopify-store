@@ -39,28 +39,28 @@ Added loading="lazy" to product images.
 
 Minified CSS/JS (base.min.css, theme.min.js).
 
+ 
 
-Screenshots
-
-## Screenshots  
+## 📸 SCREENSHOTS  
 
 ### Homepage  
-![Homepage](screenshot-1.png)  
+![Homepage](./screenshot-1.png)
+
+### Product Page  
+![Product Page](./screenshot-2.png)
+
+### Cart Drawer  
+![Cart Drawer](./screenshot-3.png)
 
 ### USP Section  
-![USP Section](screenshot-2.png)  
+![USP Section](./screenshot-4.png)
 
-### Cart Drawer with Free Shipping Goal Tracking  
-![Cart Drawer](screenshot-3.png)  
+### Klaviyo Popup  
+![Klaviyo Popup](./screenshot-5.png)
 
-### Judge.me Reviews Integration  
-![Reviews](screenshot-4.png)  
-
-### Klaviyo Signup Popup  
-![Klaviyo Popup](screenshot-5.png)  
-
-### Lighthouse Performance Audit  
-![Lighthouse Audit](screenshot-6.png)  
+### Judge.me Reviews  
+![Judge.me Reviews](./screenshot-6.png)
+ 
 
 
 Custom USP Section
