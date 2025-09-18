@@ -39,7 +39,26 @@ Minified CSS/JS (base.min.css, theme.min.js).
 
 Screenshots
 
-(Add actual screenshots from your store here — examples below)
+## Screenshots  
+
+### Homepage  
+![Homepage](screenshots/screenshot-1.png)  
+
+### USP Section  
+![USP Section](screenshots/screenshot-2.png)  
+
+### Cart Drawer with Free Shipping Goal Tracking  
+![Cart Drawer](screenshots/screenshot-3.png)  
+
+### Judge.me Reviews Integration  
+![Reviews](screenshots/screenshot-4.png)  
+
+### Klaviyo Signup Popup  
+![Klaviyo Popup](screenshots/screenshot-5.png)  
+
+### Lighthouse Performance Audit  
+![Lighthouse Audit](screenshots/screenshot-6.png)  
+
 
 Custom USP Section
 
