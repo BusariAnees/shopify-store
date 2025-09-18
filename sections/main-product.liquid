@@ -195,6 +195,13 @@
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
+                    {% if product.metafields.custom.care_instructions %}
+  <div class="product-care">
+    <h4>Care Instructions</h4>
+    <p>{{ product.metafields.custom.care_instructions }}</p>
+  </div>
+{% endif %}
+
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}

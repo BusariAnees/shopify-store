@@ -1,1 +1,18 @@
 {%- render 'cart-drawer' -%}
+{% section 'free-shipping-progress' %}
+
+
+
+
+<div class="cart-drawer__items">
+  {% for item in cart.items %}
+    <div class="cart-drawer__item">
+      <a href="{{ item.url }}">
+        <img src="{{ item.image | img_url: '50x50' }}" alt="{{ item.title }}">
+        <span>{{ item.title }}</span>
+      </a>
+      <span>{{ item.quantity }} × {{ item.price | money }}</span>
+    </div>
+  {% endfor %}
+</div>
+

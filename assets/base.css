@@ -3598,8 +3598,6 @@ details-disclosure > details {
 
 
 
-
-
 /* USP Section */
 .usp-icons {
   padding: 48px 0;
@@ -3658,14 +3656,14 @@ details-disclosure > details {
 }
 
 .usp-icons__title {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin: 0 0 6px;
   color: #111;
 }
 
 .usp-icons__text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #555;
   line-height: 1.4;
   margin: 0;
@@ -3681,4 +3679,138 @@ details-disclosure > details {
   .usp-icons__grid {
     grid-template-columns: 1fr;
   }
+}
+
+.product-care {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  border-radius: 8px;
+}
+
+.product-care__heading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-care__list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+.promo-banner {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+
+/* 404 */
+.page-404 {
+  text-align: center;
+  padding: 100px 20px;
+  font-family: 'Assistant', sans-serif;
+  background-color: #fefefe;
+}
+
+.page-404__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.page-404__text {
+  font-size: 1.25rem;
+  margin-bottom: 50px;
+  color: #555;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.page-404__products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product-card h3 {
+  margin: 12px 0 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.product-card p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.product-card a {
+  text-decoration: none; /* remove underline by default */
+  color: inherit; /* keep text color */
+}
+
+.product-card a:hover {
+  text-decoration: underline; /* optional: show on hover */
+}
+
+
+.page-404__button .btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.25rem; /* bigger text */
+  font-weight: 600;
+  border-radius: 0; /* flat button */
+  transition: background-color 0.3s ease;
+}
+
+.page-404__button .btn:hover {
+  background-color: #000;
+}
+
+
+/* free shipping */
+
+.free-shipping-progress {
+  margin: 20px 0;
+  font-family: 'Assistant', sans-serif;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #eee;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
 }

@@ -1,3 +1,26 @@
+// ============================
+// Free Shipping GA4 Tracking
+// ============================
+const FREE_SHIPPING_THRESHOLD = 100; // dollars
+
+function checkFreeShipping(cart) {
+  const subtotal = cart.items_subtotal_price / 100; // Shopify returns cents
+  if (subtotal >= FREE_SHIPPING_THRESHOLD) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'free_shipping_goal_reached', {
+        currency: cart.currency,
+        value: subtotal
+      });
+      console.log('✅ GA4 event fired: free_shipping_goal_reached');
+    } else {
+      console.warn('⚠️ gtag not found – make sure GA4 is installed with Measurement ID.');
+    }
+  }
+}
+
+// ============================
+// Cart Drawer Logic
+// ============================
 class CartDrawer extends HTMLElement {
   constructor() {
     super();
@@ -29,7 +52,7 @@ class CartDrawer extends HTMLElement {
     if (triggeredBy) this.setActiveElement(triggeredBy);
     const cartDrawerNote = this.querySelector('[id^="Details-"] summary');
     if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);
-    // here the animation doesn't seem to always get triggered. A timeout seem to help
+
     setTimeout(() => {
       this.classList.add('animate', 'active');
     });
@@ -74,6 +97,7 @@ class CartDrawer extends HTMLElement {
     this.querySelector('.drawer__inner').classList.contains('is-empty') &&
       this.querySelector('.drawer__inner').classList.remove('is-empty');
     this.productId = parsedState.id;
+
     this.getSectionsToRender().forEach((section) => {
       const sectionElement = section.selector
         ? document.querySelector(section.selector)
@@ -82,6 +106,11 @@ class CartDrawer extends HTMLElement {
       if (!sectionElement) return;
       sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);
     });
+
+    // ✅ GA4 Free Shipping Check
+    fetch('/cart.js')
+      .then(res => res.json())
+      .then(cart => checkFreeShipping(cart));
 
     setTimeout(() => {
       this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
@@ -134,3 +163,10 @@ class CartDrawerItems extends CartItems {
 }
 
 customElements.define('cart-drawer-items', CartDrawerItems);
+
+// ============================
+// Listen for cart updates too
+// ============================
+document.addEventListener('cart:updated', (event) => {
+  checkFreeShipping(event.detail.cart);
+});

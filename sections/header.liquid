@@ -7,6 +7,7 @@
   media="print"
   onload="this.media='all'"
 >
+{% render 'promo-banner' %}
 
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -109,6 +110,9 @@
     endif
   endfor
 -%}
+
+
+
 
 {% liquid
   assign header_tag = 'div'

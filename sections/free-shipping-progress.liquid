@@ -1,0 +1,78 @@
+<div class="free-shipping-progress">
+  <p class="remaining-amount">Calculating...</p>
+  <div class="progress-bar">
+    <div class="progress"></div>
+  </div>
+</div>
+
+<style>
+.free-shipping-progress {
+  margin: 20px 0;
+  font-family: 'Assistant', sans-serif;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #eee;
+  height: 12px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const progressBar = document.querySelector('.free-shipping-progress .progress');
+  const remainingAmountText = document.querySelector('.free-shipping-progress .remaining-amount');
+  if (!progressBar || !remainingAmountText) return;
+
+  const FREE_SHIPPING_THRESHOLD = 100; // dollars
+
+  function updateProgress(cart) {
+    const subtotal = cart.items_subtotal_price / 100; // Shopify returns cents
+    const percentage = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
+
+    progressBar.style.width = percentage + '%';
+
+    if (subtotal < FREE_SHIPPING_THRESHOLD) {
+      const remaining = (FREE_SHIPPING_THRESHOLD - subtotal).toFixed(2);
+      remainingAmountText.textContent = `Spend $${remaining} more for free shipping!`;
+    } else {
+      remainingAmountText.textContent = "You qualify for free shipping!";
+    }
+  }
+
+  function fetchCartAndUpdate() {
+    fetch('/cart.js')
+      .then(res => res.json())
+      .then(cart => {
+        if (!cart || typeof cart.items_subtotal_price === 'undefined') {
+          remainingAmountText.textContent = "Cart not loaded";
+          return;
+        }
+        updateProgress(cart);
+      })
+      .catch(() => {
+        remainingAmountText.textContent = "Unable to fetch cart";
+      });
+  }
+
+  // Initial fetch
+  fetchCartAndUpdate();
+
+  // Also update whenever Shopify AJAX cart changes
+  document.addEventListener('cart:updated', fetchCartAndUpdate);
+
+  // Optional: if cart drawer triggers custom events, listen too
+  document.addEventListener('cart:change', fetchCartAndUpdate);
+});
+</script>
+

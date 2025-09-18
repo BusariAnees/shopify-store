@@ -1,5 +1,15 @@
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXX');
+</script>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -372,5 +382,9 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+  
+   <script src="{{ 'free-shipping-progress.js' | asset_url }}"></script>
+   <script src="{{ 'persistent-cart.js' | asset_url }}"></script>
+
   </body>
 </html>
