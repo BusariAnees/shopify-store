@@ -23,13 +23,13 @@ Meta Tags & Open Graph – Added dynamic meta tags for SEO and social link previ
 JSON-LD Schema – Ensures rich snippets for products (price, stock, reviews) in search results.
 
 
-Analytics & Tracking
+# ANALYTICS & TRACKING
 
 Google Analytics 4 – GA4 Measurement ID installed in theme.
 
 Custom GA4 Event: free_shipping_goal_reached triggers when cart subtotal passes $100.
 
-⚡ Performance Optimizations
+# ⚡ PERFORMANCE OPTIMIZATIONS
 
 Lighthouse Audit fixes:
 
@@ -38,6 +38,7 @@ Compressed images with Crush.pics (external app).
 Added loading="lazy" to product images.
 
 Minified CSS/JS (base.min.css, theme.min.js).
+
 
 Screenshots
 
@@ -71,7 +72,7 @@ Cart Drawer with GA4 Event Trigger
 Judge.me Reviews under Product Price
 
 
-🛠️ Installation
+# 🛠️ INSTALLATION
 
 Clone or download the theme:
 
